@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryAction">#F57C00</color><!-- #607D8B, #FF9800-->
+
+    <color name="colorPrimary">#F57C00</color><!-- #607D8B, #FF9800,#006D67-->
+    <color name="colorPrimaryDark">#CB6728</color><!--#455A64, #F57C00-->
+    <!--#CFD8DC -->
+    <color name="colorAccent">#F57C00</color><!--#FF5722-#FF9800-->
+    <color name="colorSilver">#BDC3C7</color>
+    <color name="colorOrange">#F5831F</color>
+
+    <color name="errorMessageBackground">#FFC9C9</color>
+    <color name="errorMessage">#C91616</color>
+    <!--TODO rename colors -->
+    <color name="light_gray">#efefef</color>
+    <color name="lighter_gray">#f9f9f9</color>
+    <!-- <color name="skyblue">#ffaaccff</color>-->
+
+    <color name="colorDarkGrey">#666</color>
+    <color name="colorDarkGreen">#0c8078</color>
+    <color name="colorWhite">#ddffffff</color>
+    <color name="colorWhiteSolid">#ffffff</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorHapticGreen">#0d6e68</color>
+
+
+    <color name="colorBlack">#000000</color> <!-- 黑色 -->
+
+    <color name="colorButtonSelected">#b35901</color>
+    <color name="colorButtonUnSelected">#cc6601</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="avs_success_bg">#dfe9e8</color>
+    <color name="avs_failed_bg">#FFC9C9</color>
+
+</resources>
