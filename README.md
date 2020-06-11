@@ -58,6 +58,7 @@ Note: You can find the rip-sdk.aar at: https://github.com/RemitaNet/remita-andro
 **Step 10:** Rebuild project, you should see **implementation project(path: &#39;:rip-sdk&#39;)** in your dependencies block.
 ![](images/rebuild.JPG)
 
+**N.B.** Add  api 'com.google.code.gson:gson:2.8.2' to dependencies (If you haven't).
  
 ** **
 
