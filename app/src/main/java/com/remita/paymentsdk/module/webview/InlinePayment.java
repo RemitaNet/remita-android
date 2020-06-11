@@ -1,47 +1,43 @@
 package com.remita.paymentsdk.module.webview;
 
 public class InlinePayment {
-      public static String initRequest(String url, String key, String email, String amount, String currency, String firstName, String lastName, String customerid, String phoneNumber, String transactionId, String returnUrl, String narration) {
+    public static String initRequest(String url, String key, String email, String amount, String currency, String firstName, String lastName, String customerid, String phoneNumber, String transactionId, String narration) {
 
-        String script = "<html lang=\"en\">\n" +
-                "<body onload=\"makePayment()\">\n" +
-                "<script>\n" +
-                "\t function makePayment() {\n" +
-                "               \n" +
-                "                fetch('" + url + "', {\n" +
-                "                        method: 'post',\n" +
-                "                        headers: {\n" +
-                "                            \"Content-type\": \"application/json;charset=UTF-8\",\n" +
-                "                            \"publicKey\": \"" + key + "\"\n" +
-                "                        },\n" +
-                "                        body: JSON.stringify({\n" +
-                "                            \"transactionId\": " + transactionId + ",\n" +
-                "                            \"email\": \"" + email + "\",\n" +
-                "                            \"amount\": " + amount + ",\n" +
-                "                            \"currency\": \"" + currency + "\",\n" +
-                "                            \"firstName\": \"" + firstName + "\",\n" +
-                "                            \"lastName\": \"" + lastName + "\",\n" +
-                "                            \"phoneNumber\": \"" + phoneNumber + "\",\n" +
-                "                            \"customerid\": \"" + customerid + "\",\n" +
-                "                            \"narration\": \"" + narration + "\",\n" +
-                "                            \"extendedData\": \"null\",\n" +
-                "                             \"returnUrl\": \"" + returnUrl + "\"\n" +
-                "                        })\n" +
-                "                    })\n" +
-                "                    .then(function json(response) {\n" +
-                "                        return response.json()\n" +
-                "                    })\n" +
-                "                    .then(function (data) {\n" +
-                "                        console.log('Request succeeded with JSON response', data);\n" +
-                "                        window.location.href = data.responseData[\"0\"].authorizationUrl;\n" +
-                "                    })\n" +
-                "                    .catch(function (error) {\n" +
-                "                        console.log('Request failed', error);\n" +
-                "                    });\n" +
-                "        }               \n" +
-                "</script>\t\t\n" +
+        String script = "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<body  onload=\"makePayment()\">\n" +
+                "    <script>\n" +
+                "       function makePayment() {\n" +
+                "       var paymentEngine = RmPaymentEngine.init({\n" +
+                "\t\t\t\tkey:'" + key + "',\n" +
+                "                \"customerid\": \"" + customerid + "\",\n" +
+                "\t\t\t\t\ttransactionId:" + transactionId + ",\n" +
+                "                 \"firstName\": \"" + firstName + "\",\n" +
+                "                 \"lastName\": \"" + lastName + "\",\n" +
+                "                 \"email\": \"" + email + "\",\n" +
+                "                  \"amount\": " + amount + ",\n" +
+                "                  \"phoneNumber\": \"" + phoneNumber + "\",\n" +
+                "                  \"narration\": \"" + narration + "\",\n" +
+                "                  \"currency\": \"" + currency + "\",\n" +
+                "                  \n" +
+                "                    onSuccess: function (response) {\n" +
+                "                        console.log(JSON.stringify(response));\n" +
+                "                    },\n" +
+                "                    onError: function (response) {\n" +
+                "                        console.log(JSON.stringify(response));\n" +
+                "                    },\n" +
+                "                    onClose: function () {\n" +
+                "                        console.log(\"closed\");\n" +
+                "                    },                 \n" +
+                "                });\n" +
+                "                paymentEngine.openIframe();\n" +
+                "        }\n" +
+                "    </script>\n" +
+                "   \n" +
+                "     <script type=\"text/javascript\" src=\"" + url + "/payment/v1/remita-pay-inline.bundle.js\"></script>\n" +
                 "</body>\n" +
-                "</html>";
+                "\n" +
+                "</html>\n";
 
         return script;
     }

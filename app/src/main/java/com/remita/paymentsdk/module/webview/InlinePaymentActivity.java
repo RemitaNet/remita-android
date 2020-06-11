@@ -18,8 +18,7 @@ public class InlinePaymentActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.remita_default_activity);
-        setWidthSize(0.95, 0.95);
-        findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+        setWidthSize(1.03, 0.85);
 
         Intent intent = getIntent();
 

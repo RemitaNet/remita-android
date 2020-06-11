@@ -9,7 +9,7 @@ public class RIPGateway {
     }
 
     public interface Endpoint {
-        String DEMO = "https://remitademo.net/payment/v1/payment/extended/initialize";
-        String PRODUCTION = "https://remita.net/payment/v1/payment/extended/initialize";
+        String DEMO = "https://remitademo.net";
+        String PRODUCTION = "https://remita.net";
     }
 }
