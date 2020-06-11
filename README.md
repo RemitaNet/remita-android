@@ -70,7 +70,7 @@ You should invoke the RemitaInlinePaymentSDK.getInstance() at any point when mak
 
 **Sample Code:**
 ```java
-                public class MainActivity extends AppCompatActivity implements RemitaGatewayPaymentResponseListener {
+public class MainActivity extends AppCompatActivity implements RemitaGatewayPaymentResponseListener {
 
     Button button;
 
