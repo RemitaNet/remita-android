@@ -4,19 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorTransparent"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/small_padding"
-    android:paddingRight="@dimen/medium_padding1"
-    android:paddingTop="@dimen/medium_padding1"
-    android:paddingBottom="@dimen/medium_padding1">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/contentFrame"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/xxlarge_padding"
+        android:layout_height="@dimen/xxlarge_padding" />
+
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#191919">
-
-    </LinearLayout>
+        android:background="@color/colorTransparent"
+        android:visibility="gone" />
 
 </LinearLayout>

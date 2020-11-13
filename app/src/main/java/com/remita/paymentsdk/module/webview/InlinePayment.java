@@ -4,7 +4,8 @@ public class InlinePayment {
     public static String initRequest(String url, String key, String email, String amount, String currency, String firstName, String lastName, String customerid, String phoneNumber, String transactionId, String narration) {
 
         String script = "<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
+                "<html lang=\"en\">\n"
+                + "<header><meta name=\"viewport\" content=\"initial-scale=1.0\"/></header>" +
                 "<body  onload=\"makePayment()\">\n" +
                 "    <script>\n" +
                 "       function makePayment() {\n" +

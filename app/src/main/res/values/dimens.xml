@@ -9,6 +9,7 @@
     <dimen name="medium_padding2">20dp</dimen>
     <dimen name="large_padding">24dp</dimen>
     <dimen name="xlarge_padding">32dp</dimen>
+    <dimen name="xxlarge_padding">64dp</dimen>
     <dimen name="xxxlarge_padding">96dp</dimen>
     <dimen name="very_small_padding">4dp</dimen>
 
