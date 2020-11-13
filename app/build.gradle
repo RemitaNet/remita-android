@@ -1,11 +1,13 @@
-apply plugin: 'com.android.application' // Comment out for library
+//1++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+apply plugin: 'com.android.application' // Comment this line for library mode
 //apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
 
     defaultConfig {
-//        applicationId "com.remita.paymentsdk" //Comment out for library
+//2++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        applicationId "com.remita.paymentsdk" //Comment this line for library mode
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

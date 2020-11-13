@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.remita.paymentsdk">
 
+    <!--//1++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
     <application
-        android:name=".RemitaApplication"
-        android:allowBackup="true"
-
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
+        <!--//2++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--COMMENT OUT THIS ACTIVITY TAG FOR .AAR MODE-->
         <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
         <activity
@@ -29,17 +29,14 @@
             android:name=".module.webview.InlinePaymentActivity"
             android:screenOrientation="portrait"
             android:theme="@style/RemitaAppTheme" />
-        <activity
-            android:name=".module.paymentfailed.PaymentFailedActivity"
-            android:theme="@style/RemitaAppTheme" />
-        <activity
-            android:name=".module.initialization.RemitaInitializationFailedActivity"
-            android:theme="@style/RemitaAppTheme" />
     </application>
-
-<!--    android:icon="@mipmap/ic_launcher"-->
-<!--    android:label="@string/app_name"-->
-<!--    android:roundIcon="@mipmap/ic_launcher_round"-->
+    <!--//3++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
     <uses-permission android:name="android.permission.INTERNET" />
 

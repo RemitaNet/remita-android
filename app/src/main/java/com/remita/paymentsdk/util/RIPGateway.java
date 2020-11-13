@@ -10,6 +10,6 @@ public class RIPGateway {
 
     public interface Endpoint {
         String DEMO = "https://remitademo.net";
-        String PRODUCTION = "https://remita.net";
+        String PRODUCTION = "https://login.remita.net";
     }
 }
