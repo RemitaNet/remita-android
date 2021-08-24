@@ -17,7 +17,6 @@ import android.widget.ProgressBar;
 
 import com.remita.paymentsdk.R;
 import com.remita.paymentsdk.core.RemitaInlinePaymentSDK;
-import com.remita.paymentsdk.core.RemitaSetup;
 import com.remita.paymentsdk.core.ResponseCode;
 import com.remita.paymentsdk.data.MerchantData;
 import com.remita.paymentsdk.data.PaymentResponse;
@@ -34,13 +33,13 @@ public class InlinePaymentActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inline_webview_activity);
-        webView = findViewById(R.id.webView);
         progressBar = findViewById(R.id.progressBar);
 
-        String MyUA = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 " +
-                "(KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
-        webView.getSettings().setUserAgentString(MyUA);
+        webView = findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
@@ -88,7 +87,6 @@ public class InlinePaymentActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//                progressBar.setVisibility(View.VISIBLE);
                 return false;
             }
 
