@@ -59,7 +59,7 @@ Note: You can find the rip-sdk.aar at: https://github.com/RemitaNet/remita-andro
 ![](images/rebuild.JPG)
 
 **Step 11:** Just in case
-Add  **api 'com.google.code.gson:gson:2.8.2'** to your applications dependencies (If you haven't).
+Add  **implementation 'com.google.code.gson:gson:2.8.2'** to your applications dependencies (If you haven't).
  
 ** **
 
