@@ -2,6 +2,8 @@
 
 # Remita Inline Payment SDK
 
+![](images/inline_snapshot.JPG)
+
 
 ## Table of Contents
 
@@ -123,4 +125,11 @@ Where url can be:
 
 **RIPGateway.Endpoint.DEMO** (for testing) and **RIPGateway.Endpoint.PRODUCTION** (for live).
 
-![](images/inline_snapshot.JPG)
+
+# 3.0         TEST CARDS
+```json
+              CARD: 5178 6810 0000 0002,  
+              Expire Date : 05/30,  
+              CCV: 000, 
+              OTP: 123456
+```
