@@ -16,13 +16,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:paddingLeft="5dp"
         android:paddingTop="25dp"
         android:paddingRight="5dp"
         android:paddingBottom="25dp"
         android:text="Want to quickly see how easy payment should be?
 Enter an amount then tap on Pay!"
-        android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorBlack" />
 
