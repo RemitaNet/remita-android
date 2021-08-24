@@ -15,7 +15,8 @@
     <WebView
         android:id="@+id/webView"
         android:layout_width="350dp"
-        android:layout_height="700dp"
+        android:layout_height="650dp"
+        android:layout_gravity="center"
         android:background="@color/colorTransparent"
         android:visibility="gone" />
 

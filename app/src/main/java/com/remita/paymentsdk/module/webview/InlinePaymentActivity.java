@@ -37,6 +37,9 @@ public class InlinePaymentActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         progressBar = findViewById(R.id.progressBar);
 
+        String MyUA = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 " +
+                "(KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
+        webView.getSettings().setUserAgentString(MyUA);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
