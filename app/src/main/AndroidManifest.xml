@@ -27,8 +27,7 @@
 
         <activity
             android:name=".module.webview.InlinePaymentActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/RemitaAppTheme" />
+            android:screenOrientation="portrait" />
     </application>
     <!--//3++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
