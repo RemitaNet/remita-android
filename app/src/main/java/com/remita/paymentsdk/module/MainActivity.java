@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements RemitaGatewayPaym
                 String customerId = "diagboya@systemspecs.com.ng";
                 String phoneNumber = "07031731478";
                 String transactionId = String.valueOf(new Date().getTime());
-                String narration = "Bugatti Chiron 2020";
+                String narration = "Rimac Nevera";
 
                 RemitaInlinePaymentSDK remitaInlinePaymentSDK = RemitaInlinePaymentSDK.getInstance();
                 remitaInlinePaymentSDK.setRemitaGatewayPaymentResponseListener(MainActivity.this);
