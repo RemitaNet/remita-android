@@ -81,9 +81,6 @@ public class InlinePaymentActivity extends AppCompatActivity {
         });
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
-
-        MerchantData merchantData = (MerchantData) getIntent().getSerializableExtra(RIPGateway.Keys.MERCHANT_DETAILS);// RemitaSetup.getMerchantData();
-        String inlineHtml = InlinePayment.initRequest(merchantData.getUrl(), merchantData.getKey(), merchantData.getEmail(), merchantData.getAmount(), merchantData.getCurrency(), merchantData.getFirstName(), merchantData.getLastName(), merchantData.getCustomerId(), merchantData.getPhoneNumber(), merchantData.getTransactionId(), merchantData.getNarration());
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -112,7 +109,10 @@ public class InlinePaymentActivity extends AppCompatActivity {
             }
         });
 
-        webView.loadData(inlineHtml, "text/HTML", "UTF-8");
+        MerchantData merchantData = (MerchantData) getIntent().getSerializableExtra(RIPGateway.Keys.MERCHANT_DETAILS);// RemitaSetup.getMerchantData();
+        String inlineHtml = InlinePayment.initRequest(merchantData.getUrl(), merchantData.getKey(), merchantData.getEmail(), merchantData.getAmount(), merchantData.getCurrency(), merchantData.getFirstName(), merchantData.getLastName(), merchantData.getCustomerId(), merchantData.getPhoneNumber(), merchantData.getTransactionId(), merchantData.getNarration());
+
+        webView.loadDataWithBaseURL(merchantData.getUrl(), inlineHtml, "text/HTML", "UTF-8", null);
     }
 
     @Override
