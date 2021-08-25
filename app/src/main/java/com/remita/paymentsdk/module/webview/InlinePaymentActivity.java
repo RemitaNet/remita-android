@@ -117,7 +117,7 @@ public class InlinePaymentActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
+        super.onBackPressed();
     }
 }
 
